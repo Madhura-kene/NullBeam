@@ -46,14 +46,14 @@ void handleNewMessages(int numNewMessages) {
     if (text == "/reset") {
       alarmTriggered = false;
       digitalWrite(buzzerPin, LOW);
-      bot.sendMessage(chat_id, "✅ Alarm has been reset. System is armed and monitoring.", "");
+      bot.sendMessage(chat_id, " Alarm has been reset. System is armed and monitoring.", "");
       Serial.println("Alarm reset via Telegram.");
     }
     else if (text == "/status") {
       if (alarmTriggered) {
-         bot.sendMessage(chat_id, "🚨 System Status: ALARM IS CURRENTLY TRIGGERED!", "");
+         bot.sendMessage(chat_id, " System Status: ALARM IS CURRENTLY TRIGGERED!", "");
       } else {
-         bot.sendMessage(chat_id, "✅ System Status: Armed and Normal. No intruders.", "");
+         bot.sendMessage(chat_id, " System Status: Armed and Normal. No intruders.", "");
       }
     }
   }
@@ -83,7 +83,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   // Send a startup message
-  bot.sendMessage(CHAT_ID, "✅ Laser Tripwire System Armed! ⚡\nCommands available: /status, /reset", "");
+  bot.sendMessage(CHAT_ID, " Laser Tripwire System Armed! \nCommands available: /status, /reset", "");
   Serial.println("System Armed.");
 }
 
@@ -115,7 +115,7 @@ void loop() {
     alarmTriggered = true; // Latch the alarm ON
     
     // Send Telegram alert
-    bot.sendMessage(CHAT_ID, "🚨 ALERT! Intruder detected! The laser beam was broken.\n\nSend /reset to silence the alarm.", "");
+    bot.sendMessage(CHAT_ID, " ALERT! Intruder detected! The laser beam was broken.\n\nSend /reset to silence the alarm.", "");
   }
 
   // 4. Actuate Hardware based on latched state
