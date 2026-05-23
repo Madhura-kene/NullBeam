@@ -55,8 +55,6 @@ Install these via the Arduino IDE Library Manager:
 
 ##  Arduino IDE Code
 
-> [!WARNING]
-> **Security Alert:** Never commit your actual WiFi password, Bot Token, or Chat ID to a public repository (like GitHub)! Always replace them with placeholders before sharing your code online to prevent unauthorized access.
 
 Update the placeholders `YOUR_WIFI_SSID`, `YOUR_WIFI_PASSWORD`, `YOUR_BOT_TOKEN`, and `YOUR_CHAT_ID` before uploading to your ESP32:
 
