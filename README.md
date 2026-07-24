@@ -90,4 +90,4 @@ const char* password = "REPLACE_WITH_YOUR_WIFI_PASSWORD";
   * If the laser isn't perfectly aligned *before* turning on the system, it will immediately trigger. Send `/reset` once you've aligned the beam.
 
 ##  Future Improvements
-* **Multiple Tripwires**: Add additional lasers and LDRs to different analog pins to create a web of tripwires around a room!
+* **Multiple Tripwires**: Add additional lasers and LDRs to different analog pins to create a web of tripwires around a Room!
